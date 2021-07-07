@@ -6,10 +6,10 @@
 </head>
 <body>
 
-  <h2>Seja Bem-vindo</h2>
+  <h1>Seja Bem-vindo</h1>
   <ul>
   {% for cadastro in cadastros %}
-      <li>{{ cadastro.categoria }} - {{ cadastro.marca }} - {{ cadastro.modelo }} - {{ cadastro }} - {{ cadastro.valor_name }}</li>
+      <li>{{ cadastro.categoria }} - {{ cadastro.marca }} - {{ cadastro.modelo }} - {{ cadastro }} - R$ {{ cadastro.valor_name }}</li>
   {% endfor %}
   </ul>
 </body>
