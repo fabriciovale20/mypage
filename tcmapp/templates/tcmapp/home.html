@@ -8,15 +8,15 @@
 
   <h1>Tabela de Nomenclaturas</h1>
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="text" /> 
+    <input class="form-control mr-sm-2" name="categoria" type="text" />
     <button class="btn btn-primary my-2 my-sm-0" type="submit">
       Buscar
     </button>
   </form>
-  <ul>
-  {% for cadastro in cadastros %}
-      <li>{{ cadastro.categoria }} - {{ cadastro.marca }} - {{ cadastro.modelo }} - {{ cadastro }} - R$ {{ cadastro.valor }}</li>
-  {% endfor %}
-  </ul>
+<!--  <ul>-->
+<!--  {% for cadastro in cadastros %}-->
+<!--      <li>{{ cadastro.categoria }} - {{ cadastro.marca }} - {{ cadastro.modelo }} - {{ cadastro }} - R$ {{ cadastro.valor }}</li>-->
+<!--  {% endfor %}-->
+<!--  </ul>-->
 </body>
 </html>
