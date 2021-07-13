@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela Nomenclatura</title>
 <div class="row">
     <div class="col-md-4">
       <form method="GET">
@@ -15,7 +20,8 @@
             <th>Marca</th>
             <th>MAC/SN</th>
             <th>Valor</th>
-            <th>Observações</th>
+            <th>Situação</th>
+            <th>Informações</th>
           </tr>
         </thead>
         <tbody>
@@ -23,10 +29,15 @@
             <tr>
               <td>{{ obj.categoria }}</td>
               <td>{{ obj.modelo }}</td>
-              <td>{{ obj.marca }}</td>
+              <td>{% if obj.marca %}
+                {{ obj.marca }}
+              {% else %}
+              {{ a }}
+              {% endif %}</td>
               <td>{{ obj.macsn_name }}</td>
               <td>{{ obj.valor }}</td>
-              <td>{{ obj.observacoes }}</td>
+              <td>{{ obj.situacao }}</td>
+              <td>{{ obj.informacoes }}</td>
             </tr>
           {% endfor %}
         </tbody>

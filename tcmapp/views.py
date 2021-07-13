@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import Cadastro
 from .filters import CadastroFilter
 
+from django.core.paginator import Paginator
+
 def home(request):
     data = Cadastro.objects.all()
 
@@ -16,10 +18,8 @@ def home(request):
     return render(request, 'tcmapp/home.html', context)
 
 def filtro(request):
-    data = Cadastro.objects.all()
-    filter = CadastroFilter(request.GET, queryset=data)
-
-    context = {'data': data,
-               'filter': filter}
-    return render(request, 'tcmapp/filtro.html', context)
+    context = {}
+    filter = CadastroFilter(request.GET, queryset=Cadastro.objects.all())
+    context['filter'] = filter
+    return render(request, 'tcmapp/filtro.html', context=context)
 
