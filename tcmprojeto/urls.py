@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
+
 from tcmapp.views import home, filtro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home', home, name='url_home'),
     path('filtro', filtro, name='url_filtro'),
+    path('teste', filtro, name='filtro.html'),
 ]

@@ -5,10 +5,10 @@ class CadastroFilter(django_filters.FilterSet):
     cadastro = django_filters.CharFilter(lookup_expr='icontains')
     cadastro.modelo = django_filters.CharFilter(lookup_expr='icontains')
     cadastro.marca = django_filters.CharFilter(lookup_expr='icontains')
-    macsn_name = django_filters.CharFilter(lookup_expr='icontains')
+    macsn_name = django_filters.CharFilter(lookup_expr='istartswith')
     valor = django_filters.CharFilter(lookup_expr='icontains')
     cadastro.situacao = django_filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
         model = Cadastro
-        fields = ('categoria', 'modelo', 'marca', 'macsn_name', 'valor', 'situacao')
+        fields = ('categoria', 'modelo', 'marca', 'macsn_name', 'valor', 'situacao',)
