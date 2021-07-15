@@ -20,5 +20,5 @@ from tcmapp.views import filtro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('filtrobuscar', filtro, name='url_filtro'),
+    path('', filtro, name='url_filtro'),
 ]
