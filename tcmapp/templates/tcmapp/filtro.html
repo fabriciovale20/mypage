@@ -40,17 +40,17 @@
             <tbody>
           {% for obj in filter.qs %}
             <tr>
-              <td class="text-center">{{ obj.categoria }}</td>
+              <td>{{ obj.categoria }}</td>
               <td class="text-center">{{ obj.modelo }}</td>
               <td>{% if obj.marca %}
                 {{ obj.marca }}
               {% else %}
               {{ a }}
               {% endif %}</td>
-              <td class="text-center">{{ obj.macsn_name }}</td>
-              <td class="text-center">R$ {{ obj.valor }}</td>
-              <td class="text-center">{{ obj.situacao }}</td>
-              <td class="text-center">{{ obj.informacoes }}</td>
+              <td>{{ obj.macsn_name }}</td>
+              <td>R$ {{ obj.valor }}</td>
+              <td>{{ obj.situacao }}</td>
+              <td>{{ obj.informacoes }}</td>
             </tr>
           {% endfor %}
         </tbody>

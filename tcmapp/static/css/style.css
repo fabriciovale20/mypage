@@ -23,10 +23,14 @@
 }
 
 #id_valor{
-    height: 25px;
+    height: 23px;
 }
 
 .table tr th {
+    text-align: center;
+}
+
+.table tr td {
     text-align: center;
 }
 
