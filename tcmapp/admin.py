@@ -6,11 +6,13 @@ admin.site.register(Marca)
 admin.site.register(Modelo)
 admin.site.register(Situacao)
 
+
 @admin.register(Cadastro)
 class CadastroAdmin(admin.ModelAdmin):
     list_display = ('categoria', 'marca', 'modelo', 'macsn_name', 'valor', 'situacao', 'register_date')
     search_fields = ('macsn_name',)
     list_filter = ('modelo',)
+    # list_editable = ('categoria', 'marca', 'modelo', 'macsn_name', 'valor', 'situacao',)
 
     # def get_register_date(self, obj):
     #     if obj.register_date:

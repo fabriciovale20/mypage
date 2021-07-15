@@ -1,4 +1,3 @@
-import django_filters
 from django.db import models
 
 
@@ -30,6 +29,7 @@ class Modelo(models.Model):
 
     class Meta:
         ordering = ['modelo_name']
+
 
 class Situacao(models.Model):
     situacao_name = models.CharField(max_length=30)  # Modelo (Archer C20, DPC3825...)

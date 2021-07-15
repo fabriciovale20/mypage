@@ -5,12 +5,13 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Tabela Nomenclaturas</title>
+    <title>Tabela de Nomenclaturas</title>
 
     <link href={% static "css/bootstrap.min.css" %} rel="stylesheet">
     <link href={% static "css/style.css" %} rel="stylesheet">
 
 </head>
+
 <body>
 
 <div class="container-fluid">
@@ -19,21 +20,21 @@
             <img class="a-block" src={% static "img.png" %} height="250" weight="200">
             <div class="col-md-4">
               <form method="GET">
-                {{ filter.form.as_p }}
-                <input type="submit" value="Buscar"/>
+                {{ filter.form.as_ul }}
+                <input class="btn btn-primary"  type="submit" value="Buscar"/>
               </form>
             </div>
         </div>
         <table class="table">
         <thead>
           <tr>
-            <th class="text-center">Categoria</th>
-            <th class="text-center">Modelo</th>
-            <th class="text-center">Marca</th>
-            <th class="text-center">MAC/SN</th>
-            <th class="text-center">Valor</th>
-            <th class="text-center">Situação</th>
-            <th class="text-center">Informações</th>
+            <th>Categoria</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Padrão MAC/SN</th>
+            <th>Valor</th>
+            <th>Situação</th>
+            <th>Informações</th>
           </tr>
         </thead>
             <tbody>
@@ -47,7 +48,7 @@
               {{ a }}
               {% endif %}</td>
               <td class="text-center">{{ obj.macsn_name }}</td>
-              <td class="text-center">{{ obj.valor }}</td>
+              <td class="text-center">R$ {{ obj.valor }}</td>
               <td class="text-center">{{ obj.situacao }}</td>
               <td class="text-center">{{ obj.informacoes }}</td>
             </tr>
