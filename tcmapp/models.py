@@ -55,4 +55,4 @@ class Cadastro(models.Model):
         return self.macsn_name  # Comando para retornar o MAC ou Nº de Série na pagina ADMIN
 
     class Meta:
-        ordering = ['-register_date']
+        ordering = ['categoria']

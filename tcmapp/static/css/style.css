@@ -1,39 +1,98 @@
-.container-fluid tr th {
-  background-color: #B0E0E6;
-}
-
-.container-fluid tr td {
-  font-style: Arial;
-  background-color: #FFFFFF;
-}
-
-.container-top{
-  background-color: #000000;
-}
-
-/*body{
+/* Parte de Cima da página onde fica o formulário e imagem */
+.imagem-texto{
     background-color: #000000;
-    color: #FFFFFF;
-}*/
-
-.carousel-item{
-    background-color: #000000;
-    color: white;
     font-family: Arial;
+    line-height: 0;
+    font-size: 19px;
+    border: 5px solid #363636;
+}
+
+/* Div da Imagem */
+.imagem {
+    position: relative;
+    width:100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+/* Formulário */
+.formulario {
+      position: absolute;
+      text-align: top;
+      top: 20px;
+      line-height: 0px;
+      height: 30px;
+      font-weight: bold;
+}
+
+/* Corpo da Página */
+body {
+    background: #2F4F4F;
+    margin-top: 5px;
+    color: white;
+}
+
+
+/* Início dos Inputs dos Formulários */
+#id_categoria{
+    height: 23px;
+}
+
+#id_modelo{
+    height: 23px;
+}
+
+#id_marca{
+    height: 23px;
+}
+
+#id_macsn_name{
+    height: 23px;
 }
 
 #id_valor{
     height: 23px;
 }
 
+#id_situacao{
+    height: 23px;
+}
+/* Fim dos Inputs do Formulário */
+
+
+/* Cabeçalho da Tabela */
 .table tr th {
     text-align: center;
+    background-color: #B0E0E6;
+    color: black;
+    font-family: Arial;
+    font-size: 20px;
+    border-top: 5px solid #2F4F4F;
 }
 
+/* Valores da Busca */
 .table tr td {
+    background-color: #FFFFFF;
     text-align: center;
+    color: black;
+    font-family: Arial;
+    vertical-align: middle;
 }
 
+/* Botão de Buscar */
 .btn {
     cursor: pointer;
+    line-height: 1;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+/* Rodapé da TCM Telecom */
+.rodape {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-family: Arial;
+    font-size: 12px;
 }
