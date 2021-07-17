@@ -9,6 +9,7 @@
 
     <link href={% static "css/bootstrap.min.css" %} rel="stylesheet">
     <link href={% static "css/style.css" %} rel="stylesheet">
+    <link rel="icon" type="img_1.png" href="{% static 'favicontcm.png' %}"/>
 
 </head>
 
@@ -17,13 +18,13 @@
 <div class="container-fluid">
     <div class="column">
         <div class="imagem-texto">
-            <img class="imagem" src={% static "fundotopo.png" %}>
+                <img class="imagem" src={% static "logotopo.png" %}>
+            </div>
             <div class="formulario">
               <form method="GET">
                 {{ filter.form.as_p }}
                 <input class="btn btn-primary"  type="submit" value="Buscar"/>
               </form>
-            </div>
         </div>
         <table class="table">
         <thead>
