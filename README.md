@@ -23,11 +23,7 @@ python -m venv .venv
 ```
 pipenv install
 ```
-6. Rode as migrações;
-```
-python manage.py migrate
-```
-7. Rode o servidor.
+6. Rode o servidor.
 ```
 python manage.py runserver
 ```

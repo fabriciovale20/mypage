@@ -14,13 +14,17 @@
 form{
     font-family: Calibri;
     line-height: 0;
-    font-size: 17px;
+    font-size: 15px;
     position: relative;
     left: 50%;
     bottom: 290px;
     color: white;
     font-weight: bold;
     width: 550px;
+}
+
+form label{
+    font-size: 22px;
 }
 
 /* Corpo da Página */
@@ -59,7 +63,7 @@ body {
 
 /* Tabela Geral */
 table{
-
+    position: relative;
 }
 
 /* Cabeçalho da Tabela */
@@ -68,7 +72,7 @@ table{
     background-color: #B0E0E6;
     color: black;
     font-family: Arial;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 /* Valores da Busca */
@@ -78,7 +82,7 @@ table{
     color: black;
     font-family: Arial;
     vertical-align: middle;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /* Botão de Buscar */
