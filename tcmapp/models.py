@@ -1,4 +1,3 @@
-import django_filters
 from django.db import models
 
 
@@ -31,6 +30,7 @@ class Modelo(models.Model):
     class Meta:
         ordering = ['modelo_name']
 
+
 class Situacao(models.Model):
     situacao_name = models.CharField(max_length=30)  # Modelo (Archer C20, DPC3825...)
 
@@ -55,4 +55,4 @@ class Cadastro(models.Model):
         return self.macsn_name  # Comando para retornar o MAC ou Nº de Série na pagina ADMIN
 
     class Meta:
-        ordering = ['-register_date']
+        ordering = ['categoria']
