@@ -1,8 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Parte de Cima da página onde fica o formulário e imagem */
 .imagem-texto{
+    display: block;
     font-family: Arial;
     line-height: 0;
     font-size: 19px;
+    height: 300px;
 }
 
 /* Div da Imagem Gentil */
@@ -12,15 +20,24 @@
     height: 300px;
 }
 
-/* Formulário */
-.formulario form{
-    left: 1100px;
+/* Formulário
+form{
     position: absolute;
     color: white;
     text-align: top;
     top: 20px;
     line-height: 0px;
     height: 30px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+*/
+
+form{
+    position: relative;
+    left: 50%;
+    bottom: 285px;
+    color: white;
     font-weight: bold;
 }
 

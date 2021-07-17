@@ -18,44 +18,43 @@
 <div class="container-fluid">
     <div class="column">
         <div class="imagem-texto">
-                <img class="imagem" src={% static "logotopo.png" %}>
-            </div>
-            <div class="formulario">
-              <form method="GET">
-                {{ filter.form.as_p }}
-                <input class="btn btn-primary"  type="submit" value="Buscar"/>
-              </form>
+            <img class="imagem" src={% static "logotopo.png" %}>
+            <form method="GET">
+                    {{ filter.form.as_p }}
+                    <input class="btn btn-primary"  type="submit" value="Buscar"/>
+            </form>
         </div>
-        <table class="table">
-        <thead>
-          <tr>
-            <th>Categoria</th>
-            <th>Modelo</th>
-            <th>Marca</th>
-            <th>Padrão MAC/SN</th>
-            <th>Valor</th>
-            <th>Situação</th>
-            <th>Informações</th>
-          </tr>
-        </thead>
-            <tbody>
-          {% for obj in filter.qs %}
-            <tr>
-              <td>{{ obj.categoria }}</td>
-              <td class="text-center">{{ obj.modelo }}</td>
-              <td>{% if obj.marca %}
-                {{ obj.marca }}
-              {% else %}
-              {{ a }}
-              {% endif %}</td>
-              <td>{{ obj.macsn_name }}</td>
-              <td>R$ {{ obj.valor }}</td>
-              <td>{{ obj.situacao }}</td>
-              <td>{{ obj.informacoes }}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-        </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Padrão MAC/SN</th>
+                        <th>Valor</th>
+                        <th>Situação</th>
+                        <th>Informações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for obj in filter.qs %}
+                    <tr>
+                        <td>{{ obj.categoria }}</td>
+                        <td>{{ obj.modelo }}</td>
+                        <td>{% if obj.marca %}
+                        {{ obj.marca }}
+                        {% else %}
+                        {{ a }}
+                        {% endif %}
+                        </td>
+                        <td>{{ obj.macsn_name }}</td>
+                        <td>R$ {{ obj.valor }}</td>
+                        <td>{{ obj.situacao }}</td>
+                        <td>{{ obj.informacoes }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
