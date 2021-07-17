@@ -64,6 +64,7 @@ body {
 /* Tabela Geral */
 table{
     position: relative;
+    width: 100%;
 }
 
 /* Cabeçalho da Tabela */

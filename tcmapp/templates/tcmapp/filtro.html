@@ -20,9 +20,9 @@
         <div class="imagem-texto">
             <img class="imagem" src={% static "logotopo.png" %}>
             <form method="GET">
-                    {% csrf_token %}
-                    {{ filter.form.as_p }}
-                    <input class="btn btn-primary"  type="submit" value="Buscar"/>
+                {% csrf_token %}
+                {{ filter.form.as_p }}
+                <input class="btn btn-primary"  type="submit" value="Buscar"/>
             </form>
         </div>
             <table class="table">
