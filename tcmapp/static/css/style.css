@@ -1,9 +1,5 @@
 /* Parte de Cima da página onde fica o formulário e imagem */
 .imagem-texto{
-    display: block;
-    font-family: Arial;
-    line-height: 0;
-    font-size: 19px;
     height: 300px;
 }
 
@@ -14,20 +10,11 @@
     height: 300px;
 }
 
-/* Formulário
+/* Formulário */
 form{
-    position: absolute;
-    color: white;
-    text-align: top;
-    top: 20px;
-    line-height: 0px;
-    height: 30px;
-    font-weight: bold;
-    box-sizing: border-box;
-}
-*/
-
-form{
+    font-family: Calibri;
+    line-height: 0;
+    font-size: 17px;
     position: relative;
     left: 50%;
     bottom: 290px;
@@ -69,6 +56,11 @@ body {
 }
 /* Fim dos Inputs do Formulário */
 
+
+/* Tabela Geral */
+table{
+
+}
 
 /* Cabeçalho da Tabela */
 .table tr th {
