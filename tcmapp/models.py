@@ -1,4 +1,7 @@
 from django.db import models
+from django.core.files.storage import FileSystemStorage
+
+# fs = FileSystemStorage(location='/media/photos')
 
 
 class Categoria(models.Model):
@@ -18,6 +21,7 @@ class Marca(models.Model):
         return self.marca_name
 
     class Meta:
+        verbose_name = 'Marca'
         ordering = ['marca_name']
 
 
@@ -38,16 +42,29 @@ class Situacao(models.Model):
         return self.situacao_name
 
     class Meta:
+        verbose_name = 'Situação'
         verbose_name_plural = 'Situações'
+
+
+class Imagem(models.Model):
+    imagem_name = models.ImageField(upload_to='equip')  # Imagem
+
+    def __str__(self):
+        return f'{self.imagem_name}'
+
+    class Meta:
+        verbose_name_plural = 'Imagens'
+        ordering = ['-id']
 
 
 class Cadastro(models.Model):
     categoria = models.ForeignKey(Categoria, null=True, on_delete=models.CASCADE)
     marca = models.ForeignKey(Marca, null=True, blank=True, on_delete=models.CASCADE)
     modelo = models.ForeignKey(Modelo, null=True, on_delete=models.CASCADE)
-    macsn_name = models.CharField(null=True, max_length=30)  # MAC ou Nº de Série
+    macsn_name = models.CharField(null=True, max_length=30, verbose_name='Padrão MAC/SN')  # MAC ou Nº de Série
     valor = models.DecimalField(null=True, max_digits=7, decimal_places=2)  # Valor
-    situacao = models.ForeignKey(Situacao, null=True, on_delete=models.CASCADE)
+    imagem = models.ForeignKey(Imagem, null=True, on_delete=models.CASCADE)  # Imagem do Equipamento image-field para inserir imagem
+    situacao = models.ForeignKey(Situacao, null=True, on_delete=models.CASCADE, verbose_name='Situação')
     informacoes = models.TextField(null=True, blank=True)
     register_date = models.DateTimeField(null=True, auto_now_add=True)  # Data de registro
 
