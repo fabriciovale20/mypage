@@ -5,6 +5,6 @@ from .filters import CadastroFilter
 
 def filtro(request):
     context = {}
-    filter = CadastroFilter(request.GET, queryset=Cadastro.objects.all())
+    filter = CadastroFilter(request.GET, queryset=Cadastro.objects.select_related('categoria', 'marca', 'modelo'))
     context['filter'] = filter
     return render(request, 'tcmapp/filtro.html', context=context)

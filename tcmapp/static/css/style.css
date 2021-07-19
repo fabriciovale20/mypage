@@ -86,6 +86,12 @@ table{
     font-size: 14px;
 }
 
+.table tr td img {
+    text-align: center;
+    width: 140px;
+    height: 80px;
+}
+
 /* Botão de Buscar */
 .btn {
     cursor: pointer;

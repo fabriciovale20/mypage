@@ -18,7 +18,7 @@
 <div class="container-fluid">
     <div class="column">
         <div class="imagem-texto">
-            <img class="imagem" src={% static "logotopo.png" %}>
+           <img class="imagem" src={% static "logotopo.png" %}>
             <form method="GET">
                 {% csrf_token %}
                 {{ filter.form.as_p }}
@@ -33,6 +33,7 @@
                         <th>Marca</th>
                         <th>Padrão MAC/SN</th>
                         <th>Valor</th>
+                        <th>Imagem</th>
                         <th>Situação</th>
                         <th>Informações</th>
                     </tr>
@@ -44,12 +45,14 @@
                         <td>{{ obj.modelo }}</td>
                         <td>{% if obj.marca %}
                         {{ obj.marca }}
-                        {% else %}
-                        {{ a }}
                         {% endif %}
                         </td>
                         <td>{{ obj.macsn_name }}</td>
                         <td>R$ {{ obj.valor }}</td>
+                        <td>{% if obj.imagem %}
+                                <img class="figura" src="/media/{{ obj.imagem }}" />
+                            {% endif %}
+                        </td>
                         <td>{{ obj.situacao }}</td>
                         <td>{{ obj.informacoes }}</td>
                     </tr>
