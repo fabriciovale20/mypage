@@ -64,6 +64,7 @@ body {
 /* Tabela Geral */
 table{
     position: relative;
+    width: 100%;
 }
 
 /* Cabeçalho da Tabela */
@@ -72,7 +73,7 @@ table{
     background-color: #B0E0E6;
     color: black;
     font-family: Arial;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* Valores da Busca */
@@ -82,15 +83,12 @@ table{
     color: black;
     font-family: Arial;
     vertical-align: middle;
-    font-size: 17px;
-    width: 10%;
-    height: 100%;
+    font-size: 13px;
 }
 
 .table tr td img {
     text-align: center;
     width: 140px;
-    height: 80px;
 }
 
 /* Botão de Buscar */
