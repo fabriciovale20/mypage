@@ -20,7 +20,7 @@ from tcmapp.views import filtro
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('tcmtelcomadmindjango/', admin.site.urls),
+    path('tcmtelecomadmindjango/', admin.site.urls),
     path('', filtro, name='url_filtro'),
 ]
 
