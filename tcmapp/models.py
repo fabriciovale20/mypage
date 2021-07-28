@@ -55,7 +55,7 @@ class Imagem(models.Model):
 
 
 class Cadastro(models.Model):
-    categoria = models.ForeignKey(Categoria, null=True, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(Categoria, null=True, on_delete=models.CASCADE, verbose_name='Equipamento')
     marca = models.ForeignKey(Marca, null=True, blank=True, on_delete=models.CASCADE)
     modelo = models.ForeignKey(Modelo, null=True, on_delete=models.CASCADE)
     macsn_name = models.CharField(null=True, max_length=30, verbose_name='Padrão MAC/SN')  # MAC ou Nº de Série
