@@ -2,6 +2,10 @@
 
 *Utilize a página para filtrar e buscar valores dentro do banco de dados.*
 
+**Tecnologias utilizadas:**
+- Python 3.9;
+- Django 3.2;
+
 ## Como rodar o projeto:
 1. Clone o repositório;
 ```
