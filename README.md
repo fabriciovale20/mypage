@@ -5,11 +5,11 @@
 ## Como rodar o projeto:
 1. Clone o repositório;
 ```
-git clone https://github.com/fabriciovale20/sitetcm.git
+git clone https://github.com/fabriciovale20/mypage.git
 ```
 2. Acesse a pasta do projeto;
 ```
-cd sitetcm
+cd mypage
 ```
 3. Crie um ambiente virtual com Python 3;
 ```
