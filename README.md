@@ -1,6 +1,6 @@
-# TABELA DE NOMENCLATURAS TCM TELECOM
+# PÁGINA DE FILTRO/BUSCA
 
-*Página Web que contém todos os Padrões MAC/SN detalhados com Categoria, Marca, Modelo, Valor e Informações adicionais*
+*Utilize a página para filtrar e buscar valores dentro do banco de dados.*
 
 ## Como rodar o projeto:
 1. Clone o repositório;
@@ -27,3 +27,5 @@ pipenv install
 ```
 python manage.py runserver
 ```
+
+![alt text](pagequery.png)
