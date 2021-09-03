@@ -37,26 +37,32 @@ body {
 /* Início dos Inputs dos Formulários */
 #id_categoria{
     height: 23px;
+    border-radius: 5px;
 }
 
 #id_modelo{
     height: 23px;
+    border-radius: 5px;
 }
 
 #id_marca{
     height: 23px;
+    border-radius: 5px;
 }
 
 #id_macsn_name{
     height: 23px;
+    border-radius: 5px;
 }
 
 #id_valor{
     height: 23px;
+    border-radius: 5px;
 }
 
 #id_situacao{
     height: 23px;
+    border-radius: 5px;
 }
 /* Fim dos Inputs do Formulário */
 
@@ -99,7 +105,7 @@ table{
     font-weight: bold;
 }
 
-/* Rodapé da TCM Telecom */
+/* Rodapé*/
 .rodape {
     margin-left: 15px;
     margin-bottom: 15px;
